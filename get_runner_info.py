@@ -16,7 +16,7 @@ print(softwareupdate_history)
 print("HW information")
 print(runner_information)
 
-print("Writing to logfile.")
+print("Writing to logfile: " + sys.argv[1])
 log = open(sys.argv[1], "w")
 log.write("Kernel/System information:\n")
 log.write(system_info)
