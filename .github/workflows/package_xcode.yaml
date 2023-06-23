@@ -2,7 +2,7 @@ name: Package Xcode
 run-name: Package Xcode for osxcross
 on: [push]
 jobs:
-  Prepare:
+  Archive:
     runs-on: macos-13
     steps:
       - name: Checkout repo
@@ -17,4 +17,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ship_folder
-          path: $GITHUB_WORKSPACE/ship
+          path: /Users/runner/work/osxcross_xcode_packager/osxcross_xcode_packager/ship/*
