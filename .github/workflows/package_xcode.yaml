@@ -3,6 +3,9 @@ run-name: Package Xcode for osxcross
 on: [push]
 jobs:
   Prepare:
-    runs-on: macos-latest
+    runs-on: macos-13
     steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+      - run: pwd; ls -a
       - run: echo "Hello! It works!"
