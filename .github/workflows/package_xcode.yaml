@@ -13,3 +13,8 @@ jobs:
         run: python3 $GITHUB_WORKSPACE/get_runner_info.py $GITHUB_WORKSPACE/ship/system_log.txt
       - name: Package SDK
         run: python3 $GITHUB_WORKSPACE/package_sdk.py $GITHUB_WORKSPACE
+      - name: Download artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: ship_folder
+          path: $GITHUB_WORKSPACE/ship
