@@ -14,7 +14,7 @@ sdk_package_result = subprocess.check_call("./osxcross/tools/gen_sdk_package.sh"
 print("Moving SDK.\nWorking directory:")
 print(subprocess.check_output("pwd", cwd=workspace, shell=True).decode())
 print(subprocess.check_output("ls -a", cwd=workspace, shell=True).decode())
-print(subprocess.check_output("mv *.sdk.tar.xz", cwd=workspace, shell=True).decode())
+print(subprocess.check_output("mv *.sdk.tar.xz ./ship/", cwd=workspace, shell=True).decode())
 
 print("Done.")
 exit(0)
