@@ -1,0 +1,8 @@
+name: Package Xcode
+run-name: Package Xcode for osxcross
+on: [push]
+jobs:
+  Prepare:
+    runs-on: macos-latest
+    steps:
+      - run: echo "Hello! It works!"
