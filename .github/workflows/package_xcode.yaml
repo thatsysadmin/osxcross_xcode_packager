@@ -10,4 +10,4 @@ jobs:
       - name: Create ship directory
         run: mkdir $GITHUB_WORKSPACE/ship
       - name: Get information on runner
-        run: python3 $GITHUB_WORKSPACE/get_runner_info.py $GITHUB_WORKSPACE/ship/log.txt
+        run: python3 $GITHUB_WORKSPACE/get_runner_info.py /Uses/runner/log.txt
