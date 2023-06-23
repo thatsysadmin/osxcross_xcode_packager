@@ -7,5 +7,5 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - run: pwd; ls -a
-      - run: echo "Hello! It works!"
+      - name: Get information on runner
+        run: $GITHUB_WORKSPACE/get_runner_info.sh
