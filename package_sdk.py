@@ -11,8 +11,9 @@ print("Packaging Xcode SDK")
 sdk_package_result = subprocess.check_call("./osxcross/tools/gen_sdk_package.sh", cwd=workspace, shell=True, stdout=sys.stdout, stderr=subprocess.STDOUT)
 # print(sdk_package_result)
 
-# print("Moving SDK.")
-# print(subprocess.check_output("ls -a", cwd=workspace, shell=True))
+print("Moving SDK.")
+print(subprocess.check_output("ls -a", cwd=workspace, shell=True).decode())
+subprocess.check_output("mv *.sdk.tar.xz", cwd=workspace, shell=True)
 
 print("Done.")
 exit(0)
