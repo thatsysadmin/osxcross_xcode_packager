@@ -8,7 +8,7 @@ osx_clone_result = subprocess.check_output("git clone https://github.com/tpoecht
 print(osx_clone_result)
 
 print("Packaging Xcode SDK")
-sdk_package_result = subprocess.check_call("./tools/gen_sdk_package.sh", cwd=workspace, shell=True, stdout=sys.stdout, stderr=subprocess.STDOUT)
+sdk_package_result = subprocess.check_call("./osxcross/tools/gen_sdk_package.sh", cwd=workspace, shell=True, stdout=sys.stdout, stderr=subprocess.STDOUT)
 # print(sdk_package_result)
 
 print("Moving SDK.")
