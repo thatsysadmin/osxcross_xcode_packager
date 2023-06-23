@@ -1,7 +1,7 @@
 import subprocess
 import sys
 
-print("Fetching system inforamtion.")
+print("Fetching system information.")
 system_info = subprocess.check_output("uname -a", shell=True)
 xcode_version = subprocess.check_output("xcodebuild -version", shell=True)
 softwareupdate_history = subprocess.check_output("softwareupdate --history", shell=True)
@@ -29,3 +29,4 @@ log.write(runner_information)
 log.close()
 
 print("Done.")
+exit(0)
