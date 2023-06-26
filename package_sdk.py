@@ -3,6 +3,11 @@ import sys
 
 workspace = sys.argv[1] + "/workroot"
 
+print("Swapping Xcode version.")
+print(subprocess.check_output("xcode-select -switch /Applications/Xcode_14.3.1.app", shell=True).decode())
+print("Xcode version:")
+print(subprocess.check_output("xcodebuild -version", shell=True).decode())
+
 print("Cloning osxcross")
 osx_clone_result = subprocess.check_output("git clone https://github.com/tpoechtrager/osxcross.git", cwd=workspace, shell=True).decode()
 print(osx_clone_result)

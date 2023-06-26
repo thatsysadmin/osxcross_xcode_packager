@@ -8,9 +8,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v3
       - name: Create working directories
-        run: mkdir $GITHUB_WORKSPACE/ship; mkdir $GITHUB_WORKSPACE/workroot
+        run: mkdir $GITHUB_WORKSPACE/workroot
       - name: Get information on runner
-        run: python3 $GITHUB_WORKSPACE/get_runner_info.py $GITHUB_WORKSPACE/ship/system_log.txt
+        run: python3 $GITHUB_WORKSPACE/get_runner_info.py $GITHUB_WORKSPACE/workroot/system_log.txt
       - name: Package SDK
         run: python3 $GITHUB_WORKSPACE/package_sdk.py $GITHUB_WORKSPACE
       - name: Download artifacts
