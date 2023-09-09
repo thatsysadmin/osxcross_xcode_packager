@@ -1,4 +1,4 @@
-name: Zip Xcode
+name: Tarball Xcode
 run-name: Zip up Xcode in a tarball
 on: [push]
 jobs:
