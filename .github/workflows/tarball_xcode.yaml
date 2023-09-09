@@ -16,7 +16,7 @@ jobs:
       - name: Get information on runner
         run: python3 $GITHUB_WORKSPACE/get_runner_info.py $GITHUB_WORKSPACE/workroot/system_log.txt
       - name: Tarball Xcode install
-        run: python3 $GITHUB_WORKSPACE/tarball_xcode.py
+        run: python3 $GITHUB_WORKSPACE/tarball_xcode.py $GITHUB_WORKSPACE
       - name: Download artifacts
         uses: actions/upload-artifact@v3
         with:
