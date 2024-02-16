@@ -3,7 +3,7 @@ run-name: Zip up Xcode in a tarball
 on: [push]
 jobs:
   Tarball:
-    runs-on: macos-13
+    runs-on: macos-14
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
