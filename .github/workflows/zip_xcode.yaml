@@ -3,7 +3,7 @@ run-name: Zip up Xcode in a tarball
 on: [push]
 jobs:
   Tarball:
-    runs-on: macos-13
+    runs-on: macos-14
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
@@ -21,4 +21,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: ship_folder
-          path: /Applications/Xcode_15.0.app
+          path: /Applications/Xcode_15.2.app
