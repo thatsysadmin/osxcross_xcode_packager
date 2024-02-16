@@ -7,10 +7,10 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v3
-      - name: Swap Xcode version
-        uses: maxim-lobanov/setup-xcode@v1
-        with:
-          xcode-version: latest
+#      - name: Swap Xcode version
+#        uses: maxim-lobanov/setup-xcode@v1
+#        with:
+#          xcode-version: latest
       - name: Create working directories
         run: mkdir $GITHUB_WORKSPACE/workroot
       - name: Get information on runner
